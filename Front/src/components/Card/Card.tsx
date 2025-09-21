@@ -1,0 +1,26 @@
+import type { Property } from "../../types/property";
+import styles from "./Card.module.css";
+
+export const Card = ({data}: {data: Property}) => {
+  return (
+    <article className={styles.card}>
+      <img
+        src={data.imageUrl}
+        alt={data.name}
+        width={300}
+        height={200}
+      />
+
+      <div className={styles.cardContent}>
+        <h4>{data.name}</h4>
+        <p>Owner: {data.owner}</p>
+        <p>Location: {data.location}</p>
+      </div>
+
+      <div className={styles.cardFooter}>
+        <span>${data.price.toLocaleString()}</span>
+        <span>{data.year}</span>
+      </div>
+    </article>
+  );
+};

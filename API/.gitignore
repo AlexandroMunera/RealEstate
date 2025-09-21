@@ -1,0 +1,88 @@
+# .NET Core build artifacts
+bin/
+obj/
+out/
+
+# Build configuration folders
+Debug/
+Release/
+x64/
+x86/
+ARM/
+ARM64/
+
+# Visual Studio Code workspace
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User preferences
+*.user
+*.suo
+*.cache
+*.docstates
+
+# Application configuration (sensitive data)
+appsettings.json
+appsettings.Production.json
+appsettings.Staging.json
+!appsettings.Development.json.example
+
+# MongoDB connection strings and secrets
+connectionStrings.json
+secrets.json
+
+# Environment configuration
+.env
+.env.prod
+.env.staging
+.env.test
+
+# Entity Framework migrations (if using file-based)
+Migrations/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+*.coverage
+*.coveragexml
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+*.temp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+.dockerignore
+Dockerfile.prod
+
+# Local development tools
+.vs/
+*.swp
+*.swo
+*~
+
+# Runtime
+*.pid
+*.seed
+pids/

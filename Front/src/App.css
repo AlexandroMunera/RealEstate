@@ -1,0 +1,47 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    padding: 2rem;
+    text-align: left;
+    background-color: white;
+
+    h1 {
+      font-size: 26px;
+      margin: 0;
+    }
+
+    span {
+      font-size: 14px;
+      color: var(--text-color);
+    }
+  }
+
+  main {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--background-color);
+    padding: 2rem;
+
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    padding: 2rem;
+    text-align: center;
+  }
+}

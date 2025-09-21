@@ -1,0 +1,18 @@
+:root {
+  --border-color: rgb(190, 189, 189);
+  --title-color: black;
+  --text-color: rgb(98, 98, 98);
+  --background-color:   rgba(230, 228, 228, 0.56);
+  --text-highlight: green;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: white;
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
