@@ -26,6 +26,17 @@ builder.Services.AddDbContext<RealEstateDbContext>((sp, options) =>
 
 // End Mongo config //
 
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+  options.AddDefaultPolicy(builder =>
+  {
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+  });
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -185,5 +196,7 @@ app.MapDelete("/owners/{id}", async (RealEstateDbContext db, string id) =>
   await db.SaveChangesAsync();
   return Results.Ok();
 });
+
+app.UseCors();
 
 app.Run();

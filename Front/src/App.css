@@ -25,7 +25,8 @@
 
   main {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
     background-color: var(--background-color);
     padding: 2rem;
 
@@ -36,7 +37,8 @@
   section {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: flex-end;
+    gap: 1rem;
     flex-wrap: wrap;
   }
 

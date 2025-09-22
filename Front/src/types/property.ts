@@ -1,9 +1,12 @@
+import type { Owner } from "./owner";
+
 export interface Property {
-  id: number;
+  id: string;
   name: string;
-  owner: string;
-  location: string;
+  address: string;
   price: number;
-  year: number;
+  codeInternal: string;
+  year?: number;
   imageUrl: string;
+  owner: Owner;
 }

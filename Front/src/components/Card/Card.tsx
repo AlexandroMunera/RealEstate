@@ -13,8 +13,8 @@ export const Card = ({data}: {data: Property}) => {
 
       <div className={styles.cardContent}>
         <h4>{data.name}</h4>
-        <p>Owner: {data.owner}</p>
-        <p>Location: {data.location}</p>
+        <p>Owner: {data.owner.name}</p>
+        <p>Location: {data.address}</p>
       </div>
 
       <div className={styles.cardFooter}>

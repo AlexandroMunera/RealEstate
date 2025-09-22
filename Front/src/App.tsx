@@ -14,9 +14,9 @@ function App() {
         <span>Premium Real Estate Collection</span>
       </header>
       <main>
-        <aside>
+        <section>
           <Filters />
-        </aside>
+        </section>
         <section>
           {properties.map((property) => (
             <Card key={property.id} data={property} />

@@ -16,3 +16,8 @@ body {
   margin: 0;
   height: 100vh;
 }
+
+input {
+  height: 20px;
+  padding: 5px;
+}
