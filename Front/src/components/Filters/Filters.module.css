@@ -17,6 +17,18 @@
   padding: 0.6rem;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.clearButton {
+  background-color: transparent;
+  color: rgb(8, 54, 72);
+  cursor: pointer;
+  text-decoration: underline;
 
   &:hover {
     opacity: 0.8;

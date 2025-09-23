@@ -1,9 +1,9 @@
 import type { Property } from "../../types/property";
 import styles from "./Card.module.css";
 
-export const Card = ({data}: {data: Property}) => {
+export const Card = ({data, onClick}: {data: Property, onClick: (id: string) => void }) => {
   return (
-    <article className={styles.card}>
+    <article className={styles.card} onClick={() => onClick(data.id)}>
       <img
         src={data.imageUrl}
         alt={data.name}

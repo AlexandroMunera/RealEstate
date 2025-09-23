@@ -1,16 +1,11 @@
 import { ErrorBoundary } from "react-error-boundary";
 import styles from "./Filters.module.css";
 
-export const Filters = () => {
-  const search = (formData: FormData): void => {
-    console.log("formData", formData);
-    const name = formData.get("name");
-    console.log("name", name);
-  };
+export const Filters = ({onSearch}: {onSearch: (formData: FormData) => void}) => {
 
   return (
     <ErrorBoundary fallback="An error ocurred while searching.">
-      <form action={search} className={styles.container}>
+      <form action={onSearch} className={styles.container}>
         <div className={styles.filterGroup}>
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" />
@@ -29,6 +24,7 @@ export const Filters = () => {
         </div>
 
         <button className={styles.filterButton}>Search</button>
+        <a onClick={() => onSearch(new FormData())} className={styles.clearButton}>Clear</a>
       </form>
     </ErrorBoundary>
   );

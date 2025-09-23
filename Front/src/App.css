@@ -1,11 +1,13 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  height: 100%;
 }
 
 .mainContainer {
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   header {
     padding: 2rem;
@@ -29,7 +31,7 @@
     gap: 2rem;
     background-color: var(--background-color);
     padding: 2rem;
-
+    flex: 1;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
   }
