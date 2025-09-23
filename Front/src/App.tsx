@@ -14,7 +14,7 @@ function App() {
   const properties = useProperties(filters);
 
   const onSearch = (filters: FormData): void => {
-      setFilters(filters);
+    setFilters(filters);
   };
 
   const onClickProperty = async (id: string) => {
@@ -22,15 +22,27 @@ function App() {
     setPropertySelected(property);
   };
 
+  const onBackToProperties = () => {
+    setPropertySelected(undefined);
+  };
+
   return (
     <div className="mainContainer">
       <header>
-        <h1>Elite Properties</h1>
-        <span>Premium Real Estate Collection</span>
+        <div>
+          <img src="logo.svg" alt="Logo" width={60} height={50} />
+        </div>
+        <div>
+          <h1>Elite Properties</h1>
+          <span>Premium Real Estate Collection</span>
+        </div>
       </header>
       <main>
         {propertySelected ? (
-          <PropertyDetails />
+          <PropertyDetails
+            data={propertySelected}
+            onBackToProperties={onBackToProperties}
+          />
         ) : (
           <>
             <section>
@@ -44,11 +56,18 @@ function App() {
                   onClick={onClickProperty}
                 />
               ))}
+
+              {properties.length === 0 && (
+                <p>There are not properties to show</p>
+              )}
             </section>
           </>
         )}
       </main>
-      <footer>Premium real estate collection with the best properties</footer>
+      <footer>
+        {" "}
+        🏘️ Premium real estate collection with the best properties
+      </footer>
     </div>
   );
 }

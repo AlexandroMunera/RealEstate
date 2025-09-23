@@ -24,7 +24,7 @@ export const Filters = ({onSearch}: {onSearch: (formData: FormData) => void}) =>
         </div>
 
         <button className={styles.filterButton}>Search</button>
-        <a onClick={() => onSearch(new FormData())} className={styles.clearButton}>Clear</a>
+        <a onClick={() => onSearch(new FormData())}>Clear</a>
       </form>
     </ErrorBoundary>
   );

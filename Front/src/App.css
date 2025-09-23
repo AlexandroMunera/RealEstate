@@ -13,6 +13,9 @@
     padding: 2rem;
     text-align: left;
     background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
     h1 {
       font-size: 26px;

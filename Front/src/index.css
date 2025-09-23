@@ -21,3 +21,14 @@ input {
   height: 20px;
   padding: 5px;
 }
+
+a {
+  background-color: transparent;
+  color: rgb(8, 54, 72);
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

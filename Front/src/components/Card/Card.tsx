@@ -18,7 +18,7 @@ export const Card = ({data, onClick}: {data: Property, onClick: (id: string) => 
       </div>
 
       <div className={styles.cardFooter}>
-        <span>${data.price.toLocaleString()}</span>
+        <span>$ {data.price.toLocaleString()}</span>
         <span>{data.year}</span>
       </div>
     </article>
