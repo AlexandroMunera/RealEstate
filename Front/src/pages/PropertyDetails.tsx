@@ -6,7 +6,7 @@ export const PropertyDetails = ({ data, onBackToProperties }: { data: Property, 
     <>
       <a onClick={onBackToProperties}>Back to properties</a>
 
-      <div className={styles.container}>
+      <div className={styles.container} data-testid="property-details">
         <img
           src={data.imageUrl}
           alt={data.name}
